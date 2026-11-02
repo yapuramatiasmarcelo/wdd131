@@ -1,0 +1,46 @@
+/* Desenho adaptável: telas a partir de 700px */
+@media screen and (min-width: 700px) {
+    /* Encabezado e menu em linha; o hambúrguer fica oculto */
+    #menu {
+        display: none;
+    }
+
+    header {
+        flex-wrap: nowrap;
+        padding: 0.85rem 1.75rem;
+    }
+
+    .titulo-site {
+        font-size: 2rem;
+    }
+
+    nav,
+    nav.open {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+    }
+
+    nav a {
+        padding: 0.7rem 0.95rem;
+    }
+
+    /* Seção principal */
+    main {
+        padding: 1.5rem 1.5rem 3rem;
+    }
+
+    /* Quadrícula responsiva */
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.75rem 1.25rem;
+    }
+
+    /* Tipografia do título */
+    h1 {
+        font-size: 2.25rem;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum do Templo | WDD 131 – Matias M. Yapura</title>
+    <meta name="description" content="Álbum de fotos de templos de A Igreja de Jesus Cristo dos Santos dos Últimos Dias, selecionadas por Matias Marcelo Yapura.">
+    <meta name="author" content="Matias Marcelo Yapura">
+
+    <!-- Fontes -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kreon:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Folhas de estilo: celular primeiro, depois a tela maior -->
+
+    <link rel="stylesheet" href="estilos/templos.css">
+    <link rel="stylesheet" href="estilos/templos-grandes.css">
+
+    <!-- Script do menu e do rodapé -->
+
+    <script src="scripts/templos.js" defer></script>
+</head>
+<body>
+    
+    <!-- Encabezado e menu -->
+
+    <header>
+        <p class="titulo-site">Álbum do Templo</p>
+        <button id="menu" type="button" aria-controls="navegacao" aria-expanded="false" aria-label="Abrir menu">
+            <span class="hamburguer" aria-hidden="true"></span>
+        </button>
+        <nav id="navegacao">
+            <a href="#" class="ativo">Página Inicial</a>
+            <a href="#">Antigo</a>
+            <a href="#">Novo</a>
+            <a href="#">Grande</a>
+            <a href="#">Pequeno</a>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+
+    <main>
+        <h1>Página Inicial</h1>
+
+        <!-- Quadrícula das fotos -->
+
+        <div class="container">
+
+        <!-- Imagem do primeiro templo: Curitiba -->
+
+        <figure>
+            <img src="imagens/templos/curitiba.jpg" alt="Templo de Curitiba Brasil" width="640" height="507">
+            <figcaption>Templo de Curitiba Brasil</figcaption>
+        </figure>
+
+        <!-- Imagem do segundo templo: Campinas -->
+
+        <figure>
+            <img src="imagens/templos/campinas.jpg" alt="Templo de Campinas Brasil" width="640" height="535" loading="lazy">
+            <figcaption>Templo de Campinas Brasil</figcaption>
+        </figure>
+
+        <!-- Imagem do terceiro templo: São Paulo -->
+
+        <figure>
+            <img src="imagens/templos/sao-paulo.jpg" alt="Templo de São Paulo Brasil" width="576" height="640" loading="lazy">
+            <figcaption>Templo de São Paulo Brasil</figcaption>
+        </figure>
+
+        <!-- Imagem do quarto templo: Buenos Aires -->
+
+        <figure>
+            <img src="imagens/templos/buenos-aires.jpg" alt="Templo de Buenos Aires Argentina" width="640" height="599" loading="lazy">
+            <figcaption>Templo de Buenos Aires Argentina</figcaption>
+        </figure>
+
+        <!-- Imagem do quinto templo: Salt Lake -->
+
+        <figure>
+            <img src="imagens/templos/salt-lake.jpg" alt="Templo de Salt Lake" width="640" height="480" loading="lazy">
+            <figcaption>Templo de Salt Lake</figcaption>
+        </figure>
+
+        <!-- Imagem do sexto templo: Nauvoo -->
+
+        <figure>
+            <img src="imagens/templos/nauvoo.jpg" alt="Templo de Nauvoo Illinois" width="640" height="633" loading="lazy">
+            <figcaption>Templo de Nauvoo Illinois</figcaption>
+        </figure>
+
+        <!-- Imagem do sétimo templo: Manti -->
+
+        <figure>
+            <img src="imagens/templos/manti.jpg" alt="Templo de Manti Utah" width="640" height="425" loading="lazy">
+            <figcaption>Templo de Manti Utah</figcaption>
+        </figure>
+
+        <!-- Imagem do oitavo templo: San Diego -->
+
+        <figure>
+            <img src="imagens/templos/san-diego.jpg" alt="Templo de San Diego Califórnia" width="640" height="424" loading="lazy">
+            <figcaption>Templo de San Diego Califórnia</figcaption>
+        </figure>
+
+        <!-- Imagem do nono templo: Laie -->
+
+        <figure>
+            <img src="imagens/templos/laie.jpg" alt="Templo de Laie Havaí" width="640" height="480" loading="lazy">
+            <figcaption>Templo de Laie Havaí</figcaption>
+        </figure>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+     
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Matias Marcelo Yapura | Paraná, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
