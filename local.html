@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curitiba | WDD 131 – Matias M. Yapura</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Matias Marcelo Yapura. Página sobre Curitiba, com dados da cidade, clima e o Jardim Botânico.">
+    <meta name="author" content="Matias Marcelo Yapura">
+
+    <!-- Fonte, ícone e folhas de estilo -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagens/local/icone-clima.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local-grande.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+
+    <header>
+        <h1>Curitiba</h1>
+        <p class="apresentacao">Sou Matías, de Santiago del Estero, na Argentina. Trabalho com marketing e curso o bacharelado em Desenvolvimento de Software. Escolhi morar em Curitiba com minha família pela boa infraestrutura e pelos parques da cidade.</p>
+    </header>
+    <main>
+        <div class="hero">
+
+            <!-- Foto responsiva: pequena, média e grande -->
+
+            <picture>
+                <source media="(min-width: 1000px)" srcset="imagens/local/curitiba-grande.webp">
+                <source media="(min-width: 500px)" srcset="imagens/local/curitiba-media.webp">
+                <img src="imagens/local/curitiba-pequena.webp" alt="Estufa do Jardim Botânico de Curitiba, com jardins e céu azul" width="1431" height="954">
+            </picture>
+            <!-- Dados da cidade -->
+
+            <section class="dados">
+                <h2>Dados</h2>
+                <ul>
+                    <li><span class="rotulo">Área:</span> 435 km²</li>
+                    <li><span class="rotulo">População:</span> 1.773.718</li>
+                    <li><span class="rotulo">Estado:</span> Paraná</li>
+                    <li><span class="rotulo">País:</span> Brasil</li>
+                    <li><span class="rotulo">Idioma:</span> Português</li>
+                    <li><span class="rotulo">Moeda:</span> Real (BRL)</li>
+                    <li><span class="rotulo">Fuso horário:</span> UTC-3</li>
+                    <li><span class="rotulo">Altitude:</span> 934 m</li>
+                </ul>
+            </section>
+            <!-- Clima ilustrativo; o ícone SVG aparece só no celular -->
+
+            <section class="clima">
+                <h2>Clima</h2>
+                <img class="icone-clima" src="imagens/local/icone-clima.svg" alt="" width="64" height="64">
+                <ul>
+                    <li><span class="rotulo">Temperatura:</span> 8 °C</li>
+                    <li><span class="rotulo">Condições:</span> Parcialmente nublado</li>
+                    <li><span class="rotulo">Vento:</span> 12 km/h</li>
+                    <li><span class="rotulo">Sensação térmica:</span> <span id="sensacao">N/A</span></li>
+                </ul>
+                <p class="aviso">Clima ilustrativo.</p>
+            </section>
+        </div>
+    </main>
+    <!-- Rodapé: ano, última modificação e crédito da foto -->
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Matias Marcelo Yapura<br>Curitiba, Paraná</p>
+        <p id="ultimaModificacao"></p>
+        <p class="credito">Foto: <a href="https://commons.wikimedia.org/wiki/File:Estufa-Jardim-Botanico-Curitiba-out.JPG">Ricardo Marconato</a>, CC BY-SA 4.0</p>
+    </footer>
+</body>
+</html>

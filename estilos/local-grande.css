@@ -1,0 +1,61 @@
+/* Tela larga, a partir de 800px */
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 3rem;
+        padding: 1.25rem 1rem 0.35rem;
+    }
+
+    /* A foto vira a base e os cartões ficam por cima */
+
+    .hero {
+        position: relative;
+    }
+
+    .hero picture img {
+        height: 640px;
+        object-fit: cover;
+        object-position: center 40%;
+    }
+
+    .dados,
+    .clima {
+        position: absolute;
+        margin: 0;
+        padding: 0 1rem 1rem;
+        background-color: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .dados {
+        top: 1.5rem;
+        left: 1.5rem;
+        width: 18rem;
+    }
+
+    .clima {
+        right: 1.5rem;
+        bottom: 1.5rem;
+        width: 24rem;
+    }
+
+    .dados h2,
+    .clima h2 {
+        margin: 0 -1rem 0.85rem;
+        padding: 0.55rem 1rem;
+        background-color: var(--verde);
+        color: #ffffff;
+        font-size: 1.35rem;
+    }
+
+    /* No desktop o SVG some e o emoji fica depois do título */
+
+    .clima .icone-clima {
+        display: none;
+    }
+
+    .clima h2::after {
+        content: "⛅";
+        margin-left: 0.4rem;
+    }
+}

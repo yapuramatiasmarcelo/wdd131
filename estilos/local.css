@@ -1,0 +1,133 @@
+/* Cores e fonte usadas na página */
+
+:root {
+    --verde: #0b5d1e;
+    --amarelo: #f5c518;
+    --texto: #1a1a1a;
+    --cartao: #ffffff;
+    --fonte: "Montserrat", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--texto);
+    background-color: var(--cartao);
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: var(--verde);
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 0.45rem solid var(--amarelo);
+}
+
+h1 {
+    margin: 0;
+    padding: 0.9rem 1rem 0.35rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.apresentacao {
+    max-width: 40rem;
+    margin: 0 auto 1rem;
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    text-align: center;
+    text-wrap: balance;
+}
+
+/* Imagem principal */
+
+.hero picture {
+    display: block;
+    max-width: 100%;
+}
+
+.hero picture img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Dados e clima, empilhados no celular */
+
+.dados,
+.clima {
+    margin: 0;
+    padding: 1.25rem 1rem 1.5rem;
+    text-align: center;
+    background-color: var(--cartao);
+}
+
+.dados h2,
+.clima h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.6rem;
+}
+
+.dados ul,
+.clima ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dados li,
+.clima li {
+    margin: 0.2rem 0;
+}
+
+.rotulo {
+    font-weight: 700;
+}
+
+.icone-clima {
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 0 auto 0.5rem;
+}
+
+.aviso {
+    margin: 0.75rem 0 0;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: var(--verde);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0.75rem 1.15rem;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+#ultimaModificacao,
+.credito {
+    color: #fff4c2;
+    font-size: 0.9rem;
+}
+
+.credito a {
+    color: #fff4c2;
+}
