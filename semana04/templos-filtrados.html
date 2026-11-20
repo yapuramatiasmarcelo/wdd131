@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum do Templo | WDD 131 – Matias M. Yapura</title>
+    <meta name="description" content="Álbum de fotos de templos de A Igreja de Jesus Cristo dos Santos dos Últimos Dias, selecionadas por Matias Marcelo Yapura.">
+    <meta name="author" content="Matias Marcelo Yapura">
+
+    <!-- Fontes -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kreon:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Folhas de estilo: celular primeiro, depois a tela maior -->
+
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-grandes-filtrados.css">
+
+    <!-- Script do menu e do rodapé -->
+
+    <script src="scripts/templos-filtrados.js" defer></script>
+</head>
+<body>
+
+    <!-- Encabezado e menu -->
+
+    <header>
+        <p class="titulo-site">Álbum do Templo</p>
+        <button id="menu" type="button" aria-controls="navegacao" aria-expanded="false" aria-label="Abrir menu">
+            <span class="hamburguer" aria-hidden="true"></span>
+        </button>
+        <nav id="navegacao">
+            <a href="#" class="ativo">Página Inicial</a>
+            <a href="#">Antigo</a>
+            <a href="#">Novo</a>
+            <a href="#">Grande</a>
+            <a href="#">Pequeno</a>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+
+    <main>
+        <h1>Matias M. Yapura</h1>
+
+        <!-- Quadrícula dos templos gerada por JavaScript -->
+
+        <div class="container" id="galeria-templos"></div>
+    </main>
+
+    <!-- Rodapé -->
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Matias Marcelo Yapura | Paraná, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
