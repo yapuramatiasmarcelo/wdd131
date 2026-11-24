@@ -1,0 +1,297 @@
+:root {
+    --verde: #174A3A;
+    --creme: #FFF8ED;
+    --vermelho: #A12430;
+    --cinza: #252525;
+    --caixa: #fffdf8;
+    --linha: #252525;
+    --fonte-titulo: Lora, Georgia, serif;
+    --fonte-corpo: "Source Sans 3", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--creme);
+    color: var(--cinza);
+    font-family: var(--fonte-corpo);
+    font-size: 1.0625rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--verde);
+    color: var(--creme);
+    padding: 1.5rem 1rem;
+}
+
+header h1,
+header p {
+    max-width: 64rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 {
+    margin: 0 0 0.4rem;
+    color: var(--creme);
+    font-size: 1.85rem;
+}
+
+header p {
+    margin: 0;
+    color: var(--creme);
+}
+
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0.5rem 0.75rem 2.5rem;
+}
+
+section {
+    margin-top: 1.75rem;
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    color: var(--verde);
+    font-size: 1.55rem;
+}
+
+h3 {
+    margin: 0 0 0.7rem;
+    color: var(--verde);
+    font-size: 1.25rem;
+}
+
+p,
+li,
+dd {
+    color: var(--cinza);
+}
+
+a {
+    color: var(--vermelho);
+}
+
+.destaque {
+    color: var(--vermelho);
+    font-weight: 600;
+}
+
+.paleta,
+.cenarios {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.paleta li,
+.cenarios li {
+    margin: 0.55rem 0;
+}
+
+.paleta li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.amostra {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-family: var(--fonte-titulo);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.amostra-verde {
+    background-color: var(--verde);
+    color: var(--creme);
+}
+
+.amostra-creme {
+    background-color: var(--creme);
+    color: var(--verde);
+    border: 2px solid var(--verde);
+}
+
+.amostra-vermelho {
+    background-color: var(--vermelho);
+    color: var(--creme);
+}
+
+.amostra-cinza {
+    background-color: var(--creme);
+    color: var(--cinza);
+    border: 2px solid var(--cinza);
+}
+
+.visao {
+    margin-top: 1.35rem;
+}
+
+.rotulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 2.3rem;
+    margin: 0;
+    padding: 0.35rem 0.4rem;
+    border: 2px solid var(--linha);
+    background-color: var(--caixa);
+    color: var(--cinza);
+    font-family: var(--fonte-corpo);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.imagem {
+    background-color: #f3eee4;
+    background-image:
+        linear-gradient(to top right, transparent calc(50% - 1px), var(--linha) calc(50% - 1px), var(--linha) calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(to top left, transparent calc(50% - 1px), var(--linha) calc(50% - 1px), var(--linha) calc(50% + 1px), transparent calc(50% + 1px));
+}
+
+.celular,
+.escritorio {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.55rem;
+    border: 3px solid var(--cinza);
+    background-color: #ffffff;
+}
+
+.celular {
+    max-width: 22rem;
+}
+
+.cabecalho,
+.colunas,
+.cartoes {
+    display: grid;
+    gap: 0.4rem;
+    min-width: 0;
+    margin-bottom: 0.4rem;
+}
+
+.celular .cabecalho {
+    grid-template-columns: minmax(0, 1fr) 4.4rem;
+}
+
+.celular .cartoes,
+.escritorio .info {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.imagem-principal,
+.texto,
+.navegacao,
+.titulo,
+.info,
+.cartao,
+.acao,
+.referencias {
+    min-width: 0;
+    margin-bottom: 0.4rem;
+}
+
+.celular .imagem-principal,
+.escritorio .imagem-principal {
+    min-height: 7.5rem;
+}
+
+.celular .cartao .imagem,
+.escritorio .cartao .imagem {
+    min-height: 4.2rem;
+    margin-bottom: 0.35rem;
+}
+
+.cartao .rotulo {
+    margin-bottom: 0.35rem;
+}
+
+.cartao .rotulo:last-child,
+.rodape {
+    margin-bottom: 0;
+}
+
+.acao {
+    border-color: var(--vermelho);
+    background-color: var(--vermelho);
+    color: var(--creme);
+}
+
+.escritorio .cabecalho {
+    grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+}
+
+.escritorio .colunas {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+}
+
+.escritorio .texto {
+    margin-bottom: 0;
+}
+
+.escritorio .info {
+    margin-bottom: 0;
+}
+
+.escritorio .info .rotulo:last-child {
+    margin-bottom: 0;
+}
+
+.escritorio .cartoes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.escritorio .rodape {
+    min-height: 2.8rem;
+}
+
+footer {
+    background-color: var(--verde);
+    color: var(--creme);
+    padding: 1rem 0.75rem 1.25rem;
+    text-align: center;
+}
+
+footer p {
+    max-width: 64rem;
+    margin: 0 auto;
+    color: var(--creme);
+}
+
+@media (max-width: 390px) {
+    h1 {
+        font-size: 1.55rem;
+    }
+
+    .rotulo {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.2rem;
+    }
+}
