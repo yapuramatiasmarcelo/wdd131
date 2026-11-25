@@ -157,9 +157,9 @@ a {
     min-height: 2.3rem;
     margin: 0;
     padding: 0.35rem 0.4rem;
-    border: 2px solid var(--linha);
-    background-color: var(--caixa);
-    color: var(--cinza);
+    border: 2px solid #4a4a4a;
+    background-color: #ffffff;
+    color: #222222;
     font-family: var(--fonte-corpo);
     font-size: 0.8125rem;
     font-weight: 600;
@@ -169,10 +169,11 @@ a {
 }
 
 .imagem {
-    background-color: #f3eee4;
+    min-height: 4.2rem;
+    background-color: #d0d0d0;
     background-image:
-        linear-gradient(to top right, transparent calc(50% - 1px), var(--linha) calc(50% - 1px), var(--linha) calc(50% + 1px), transparent calc(50% + 1px)),
-        linear-gradient(to top left, transparent calc(50% - 1px), var(--linha) calc(50% - 1px), var(--linha) calc(50% + 1px), transparent calc(50% + 1px));
+        linear-gradient(to top right, transparent calc(50% - 1px), #4a4a4a calc(50% - 1px), #4a4a4a calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(to top left, transparent calc(50% - 1px), #4a4a4a calc(50% - 1px), #4a4a4a calc(50% + 1px), transparent calc(50% + 1px));
 }
 
 .celular,
@@ -180,21 +181,36 @@ a {
     width: 100%;
     max-width: 100%;
     padding: 0.55rem;
-    border: 3px solid var(--cinza);
-    background-color: #ffffff;
+    border: 3px solid #4a4a4a;
+    background-color: #f3f3f3;
 }
 
 .celular {
     max-width: 22rem;
 }
 
+.quadro-desktop {
+    overflow-x: auto;
+}
+
+.escritorio {
+    min-width: 52rem;
+}
+
 .cabecalho,
-.colunas,
-.cartoes {
+.cartoes,
+.navegacao-horizontal,
+.pratica-itens,
+.bloco {
     display: grid;
     gap: 0.4rem;
     min-width: 0;
-    margin-bottom: 0.4rem;
+}
+
+.bloco,
+.navegacao,
+.rodape {
+    margin-top: 0.4rem;
 }
 
 .celular .cabecalho {
@@ -202,74 +218,47 @@ a {
 }
 
 .celular .cartoes,
-.escritorio .info {
+.celular .pratica-itens {
     grid-template-columns: minmax(0, 1fr);
 }
 
-.imagem-principal,
-.texto,
-.navegacao,
-.titulo,
-.info,
-.cartao,
-.acao,
-.referencias {
-    min-width: 0;
-    margin-bottom: 0.4rem;
-}
-
-.celular .imagem-principal,
-.escritorio .imagem-principal {
-    min-height: 7.5rem;
-}
-
-.celular .cartao .imagem,
-.escritorio .cartao .imagem {
-    min-height: 4.2rem;
-    margin-bottom: 0.35rem;
-}
-
-.cartao .rotulo {
-    margin-bottom: 0.35rem;
-}
-
-.cartao .rotulo:last-child,
+.marca,
 .rodape {
-    margin-bottom: 0;
+    background-color: #6b6b6b;
+    color: #ffffff;
 }
 
-.acao {
-    border-color: var(--vermelho);
-    background-color: var(--vermelho);
-    color: var(--creme);
+.cartao {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0;
+}
+
+.titulo {
+    background-color: #e6e6e6;
 }
 
 .escritorio .cabecalho {
     grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+    align-items: stretch;
 }
 
-.escritorio .colunas {
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
-}
-
-.escritorio .texto {
-    margin-bottom: 0;
-}
-
-.escritorio .info {
-    margin-bottom: 0;
-}
-
-.escritorio .info .rotulo:last-child {
-    margin-bottom: 0;
-}
-
-.escritorio .cartoes {
+.escritorio .navegacao-horizontal,
+.escritorio .cartoes,
+.escritorio .pratica-itens {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.escritorio .rodape {
-    min-height: 2.8rem;
+.escritorio .navegacao-horizontal {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.escritorio .pratica .titulo {
+    grid-column: 1 / -1;
+}
+
+.escritorio .pratica {
+    grid-template-columns: minmax(0, 1fr);
 }
 
 footer {

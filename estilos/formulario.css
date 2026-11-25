@@ -1,0 +1,237 @@
+:root {
+    --tinta: #1a1a1a;
+    --papel: #f4f7f8;
+    --cartao: #ffffff;
+    --navy: #0d3b66;
+    --navy-escuro: #082844;
+    --linha: #8aa0b4;
+    --foco: #0d3b66;
+    --fonte-titulo: "Montserrat", Arial, sans-serif;
+    --fonte-corpo: "Kreon", Georgia, serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--tinta);
+    background-color: var(--papel);
+    font-family: var(--fonte-corpo);
+    font-size: 1.0625rem;
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--navy);
+    color: #ffffff;
+    text-align: center;
+}
+
+#titulo-curso {
+    display: block;
+    padding: 1rem;
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 2.5rem;
+}
+
+h1 {
+    margin: 0 0 1rem;
+    color: var(--navy);
+    font-family: var(--fonte-titulo);
+    font-size: 1.75rem;
+    line-height: 1.25;
+    text-align: center;
+}
+
+form,
+.confirmacao {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+    background-color: var(--cartao);
+    border: 1px solid #c5d0da;
+}
+
+.campo,
+fieldset {
+    display: grid;
+    gap: 0.4rem;
+    margin: 0;
+    min-width: 0;
+}
+
+fieldset {
+    padding: 0.75rem;
+    border: 1px solid #c5d0da;
+}
+
+label,
+legend {
+    color: var(--navy);
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+}
+
+legend {
+    padding: 0 0.25rem;
+}
+
+.dica {
+    margin: 0;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.75rem;
+    border: 2px solid var(--navy);
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    color: var(--tinta);
+    font: inherit;
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.classificacao-opcoes {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.4rem;
+}
+
+.opcao-nota {
+    display: grid;
+    justify-items: center;
+    gap: 0.2rem;
+    min-height: 2.75rem;
+    text-align: center;
+}
+
+.opcao-nota input,
+.recurso input {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+    accent-color: var(--navy);
+}
+
+.estrelas {
+    color: var(--navy);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+}
+
+.opcao-nota label {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.recurso {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 2.75rem;
+}
+
+input[type="submit"] {
+    min-height: 3rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: var(--navy);
+    color: #ffffff;
+    font-family: var(--fonte-titulo);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--navy-escuro);
+}
+
+:focus-visible {
+    outline: 3px solid var(--foco);
+    outline-offset: 3px;
+}
+
+.resumo {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+}
+
+.resumo div {
+    display: grid;
+    gap: 0.1rem;
+}
+
+.resumo dt {
+    color: var(--navy);
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+}
+
+.resumo dd {
+    margin: 0;
+}
+
+.total {
+    margin: 0;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+}
+
+.voltar {
+    justify-self: start;
+    color: var(--navy);
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+}
+
+footer {
+    background-color: var(--navy);
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--fonte-titulo);
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+#ultimaModificacao {
+    color: #ffe08a;
+}
+
+@media (min-width: 40rem) {
+    #titulo-curso {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding-top: 2rem;
+    }
+
+    form,
+    .confirmacao {
+        padding: 1.75rem;
+    }
+}

@@ -1,0 +1,134 @@
+:root {
+    --tinta: #222222;
+    --papel: #f7f7f7;
+    --caixa: #ffffff;
+    --linha: #4a4a4a;
+    --faixa: #6b6b6b;
+    --bloco: #e6e6e6;
+    --imagem: #d0d0d0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--papel);
+    color: var(--tinta);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+header,
+footer {
+    background-color: var(--faixa);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1,
+h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.35rem;
+}
+
+main {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 2.5rem;
+}
+
+.introducao {
+    max-width: 46rem;
+    margin: 0 0 1.5rem;
+}
+
+.visao {
+    margin-top: 1.5rem;
+}
+
+.rotulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.2rem;
+    margin: 0;
+    padding: 0.35rem 0.45rem;
+    border: 2px solid var(--linha);
+    background-color: var(--caixa);
+    color: var(--tinta);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.faixa,
+.rodape,
+.botao {
+    background-color: var(--faixa);
+    color: #ffffff;
+}
+
+.titulo,
+.grupo {
+    background-color: var(--bloco);
+}
+
+.campo-grande {
+    min-height: 5.5rem;
+}
+
+.telefone,
+.monitor {
+    padding: 0.55rem;
+    border: 3px solid var(--linha);
+    background-color: #f3f3f3;
+}
+
+.telefone {
+    max-width: 22rem;
+}
+
+.telefone .miolo,
+.monitor .miolo,
+.opcoes,
+.recursos,
+.par {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.monitor {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.monitor .miolo {
+    max-width: 46rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.monitor .opcoes {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.monitor .recursos,
+.monitor .par {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 40rem) {
+    .monitor {
+        overflow-x: auto;
+    }
+
+    .monitor .miolo {
+        min-width: 40rem;
+    }
+}

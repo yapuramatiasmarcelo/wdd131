@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação da Avaliação | WDD 131 – Matias M. Yapura</title>
+    <meta name="description" content="Confirmação de envio da avaliação de produto e total de avaliações concluídas neste navegador.">
+    <meta name="author" content="Matias Marcelo Yapura">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/obterdatas.js" defer></script>
+    <script src="scripts/produtos.js" defer></script>
+    <script src="scripts/avaliacao.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="titulo-curso">WDD 131 – Fundamentos da Web Dinâmica</span>
+    </header>
+    <main>
+        <h1>Confirmação da avaliação</h1>
+        <section class="confirmacao">
+            <p id="mensagem">Nenhuma avaliação nova foi contada. Envie o formulário para registrar uma avaliação.</p>
+            <p class="total">Total de avaliações concluídas neste navegador: <span id="total">0</span></p>
+            <dl class="resumo" id="resumo" hidden>
+                <div>
+                    <dt>Produto</dt>
+                    <dd id="resumo-produto"></dd>
+                </div>
+                <div>
+                    <dt>Classificação</dt>
+                    <dd id="resumo-nota"></dd>
+                </div>
+                <div>
+                    <dt>Data de instalação</dt>
+                    <dd id="resumo-instalacao"></dd>
+                </div>
+                <div>
+                    <dt>Recursos úteis</dt>
+                    <dd id="resumo-recursos"></dd>
+                </div>
+                <div>
+                    <dt>Avaliação escrita</dt>
+                    <dd id="resumo-comentario"></dd>
+                </div>
+                <div>
+                    <dt>Nome de usuário</dt>
+                    <dd id="resumo-usuario"></dd>
+                </div>
+            </dl>
+            <a class="voltar" href="formulario.html">Voltar ao formulário</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Matias Marcelo Yapura | Paraná, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>

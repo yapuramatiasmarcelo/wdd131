@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Produto | WDD 131 – Matias M. Yapura</title>
+    <meta name="description" content="Formulário de avaliação de produto do WDD 131, com classificação, data de instalação, recursos úteis e comentário.">
+    <meta name="author" content="Matias Marcelo Yapura">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/obterdatas.js" defer></script>
+    <script src="scripts/produtos.js" defer></script>
+    <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="titulo-curso">WDD 131 – Fundamentos da Web Dinâmica</span>
+    </header>
+    <main>
+        <h1>Avaliação de produto</h1>
+        <form method="get" action="avaliacao.html">
+            <div class="campo">
+                <label for="produto">Nome do Produto (obrigatório)</label>
+                <select id="produto" name="produto" required>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>Classificação Geral (obrigatório)</legend>
+                <div class="classificacao-opcoes">
+                    <div class="opcao-nota">
+                        <input type="radio" id="nota-1" name="nota" value="1" required>
+                        <span class="estrelas" aria-hidden="true">☆</span>
+                        <label for="nota-1">1 de 5</label>
+                    </div>
+                    <div class="opcao-nota">
+                        <input type="radio" id="nota-2" name="nota" value="2" required>
+                        <span class="estrelas" aria-hidden="true">☆☆</span>
+                        <label for="nota-2">2 de 5</label>
+                    </div>
+                    <div class="opcao-nota">
+                        <input type="radio" id="nota-3" name="nota" value="3" required>
+                        <span class="estrelas" aria-hidden="true">☆☆☆</span>
+                        <label for="nota-3">3 de 5</label>
+                    </div>
+                    <div class="opcao-nota">
+                        <input type="radio" id="nota-4" name="nota" value="4" required>
+                        <span class="estrelas" aria-hidden="true">☆☆☆☆</span>
+                        <label for="nota-4">4 de 5</label>
+                    </div>
+                    <div class="opcao-nota">
+                        <input type="radio" id="nota-5" name="nota" value="5" required>
+                        <span class="estrelas" aria-hidden="true">☆☆☆☆☆</span>
+                        <label for="nota-5">5 de 5</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="campo">
+                <label for="instalacao">Data de Instalação (obrigatório)</label>
+                <input type="date" id="instalacao" name="instalacao" required>
+            </div>
+
+            <fieldset>
+                <legend>Recursos Úteis</legend>
+                <p class="dica">Marque todos os que se aplicam.</p>
+                <label class="recurso" for="durabilidade">
+                    <input type="checkbox" id="durabilidade" name="recursos" value="durabilidade">
+                    Durabilidade
+                </label>
+                <label class="recurso" for="facilidade">
+                    <input type="checkbox" id="facilidade" name="recursos" value="facilidade">
+                    Facilidade de uso
+                </label>
+                <label class="recurso" for="desempenho">
+                    <input type="checkbox" id="desempenho" name="recursos" value="desempenho">
+                    Desempenho
+                </label>
+                <label class="recurso" for="design">
+                    <input type="checkbox" id="design" name="recursos" value="design">
+                    Design
+                </label>
+            </fieldset>
+
+            <div class="campo">
+                <label for="comentario">Avaliação Escrita (opcional)</label>
+                <textarea id="comentario" name="comentario" rows="5"></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="usuario">Nome de Usuário (opcional)</label>
+                <input type="text" id="usuario" name="usuario" autocomplete="name">
+            </div>
+
+            <input type="submit" value="Enviar avaliação">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Matias Marcelo Yapura | Paraná, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
